@@ -4,15 +4,15 @@
 
 :root {
   /* Brand palette */
-  --color-navy:       #0B1D33;
-  --color-navy-mid:   #122A47;
-  --color-navy-light: #1A3A5C;
-  --color-teal:       #2EC4B6;
-  --color-teal-dark:  #1FA898;
-  --color-teal-glow:  rgba(46, 196, 182, 0.15);
-  --color-slate:      #8899AA;
-  --color-light:      #E8EEF2;
-  --color-off-white:  #F5F7F9;
+  --color-navy:       #8B4520;
+  --color-navy-mid:   #B85A28;
+  --color-navy-light: #D4762F;
+  --color-teal:       #D4692A;
+  --color-teal-dark:  #B85620;
+  --color-teal-glow:  rgba(212, 105, 42, 0.12);
+  --color-slate:      #7A7067;
+  --color-light:      #F0E4D9;
+  --color-off-white:  #FDF5EF;
   --color-white:      #FFFFFF;
 
   /* Typography */
@@ -87,16 +87,16 @@ h2 {
 }
 
 .btn--primary {
-  background: var(--color-teal);
-  color: var(--color-navy);
-  border-color: var(--color-teal);
+  background: #FFF5E0;
+  color: #3B2314;
+  border-color: #FFF5E0;
 }
 
 .btn--primary:hover {
-  background: var(--color-teal-dark);
-  border-color: var(--color-teal-dark);
+  background: #FFFFFF;
+  border-color: #FFFFFF;
   transform: translateY(-1px);
-  box-shadow: 0 6px 24px rgba(46, 196, 182, 0.3);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
 }
 
 .btn--outline {
@@ -177,8 +177,8 @@ h2 {
 .nav__links a:hover { color: var(--color-white); }
 
 .nav__cta {
-  background: var(--color-teal);
-  color: var(--color-navy) !important;
+  background: #FFF5E0;
+  color: #3B2314 !important;
   padding: 0.55rem 1.3rem;
   border-radius: 60px;
   font-weight: 600 !important;
@@ -186,7 +186,7 @@ h2 {
 }
 
 .nav__cta:hover {
-  background: var(--color-teal-dark);
+  background: #FFFFFF;
   transform: translateY(-1px);
 }
 
@@ -235,7 +235,7 @@ h2 {
   align-items: center;
   justify-content: center;
   padding: 8rem 2rem 6rem;
-  background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-mid) 50%, var(--color-navy-light) 100%);
+  background: linear-gradient(180deg, var(--color-navy) 0%, var(--color-navy-mid) 40%, var(--color-navy-light) 70%, #E8A870 100%);
   overflow: hidden;
   text-align: center;
 }
@@ -262,7 +262,7 @@ h2 {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-teal);
+  color: #FFF5E0;
   margin-bottom: 1.5rem;
 }
 
@@ -275,7 +275,7 @@ h2 {
 
 .hero__title em {
   font-style: italic;
-  color: var(--color-teal);
+  color: #3B2314;
 }
 
 .hero__subtitle {
@@ -335,6 +335,19 @@ h2 {
 
 .about__text p:first-of-type { margin-top: 1.25rem; }
 
+.about__text a {
+  color: var(--color-teal-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(46, 196, 182, 0.4);
+  text-underline-offset: 3px;
+  transition: var(--transition);
+}
+
+.about__text a:hover {
+  text-decoration-color: var(--color-teal-dark);
+}
+
 .about__stats {
   display: flex;
   flex-direction: column;
@@ -383,6 +396,111 @@ h2 {
   color: var(--color-teal);
   margin-bottom: 0.25rem;
   width: 100%;
+}
+
+/* ---- About: Team Cards ---- */
+.about__team {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.team-card {
+  display: flex;
+  gap: 1.25rem;
+  background: var(--color-off-white);
+  border: 1px solid var(--color-light);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.team-card:hover {
+  border-color: var(--color-teal);
+  box-shadow: 0 4px 20px var(--color-teal-glow);
+}
+
+.team-card__photo {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-teal);
+}
+
+.team-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.team-card__name {
+  font-family: var(--font-body) !important;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.15rem;
+}
+
+.team-card__role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: 0.5rem;
+}
+
+.team-card__bio {
+  font-size: 0.9rem;
+  color: var(--color-slate);
+  line-height: 1.55;
+}
+
+.about__track-record {
+  background: var(--color-off-white);
+  border: 1px solid var(--color-light);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+}
+
+.about__track-record h3 {
+  font-family: var(--font-body) !important;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.75rem;
+}
+
+.about__track-record ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about__track-record li {
+  font-size: 0.9rem;
+  color: var(--color-slate);
+  padding: 0.3rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.about__track-record li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-teal);
 }
 
 /* ---- Product ---- */
@@ -654,6 +772,16 @@ h2 {
 }
 
 @media (max-width: 640px) {
+  .team-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .team-card__info {
+    align-items: center;
+  }
+
   .nav__links { display: none; }
   .nav__mobile-toggle { display: block; }
 
