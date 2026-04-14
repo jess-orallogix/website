@@ -559,8 +559,8 @@ h2 {
 
 .product__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
   margin-top: 2.5rem;
 }
 
@@ -568,7 +568,7 @@ h2 {
   background: var(--color-white);
   border: 1px solid var(--color-light);
   border-radius: var(--radius);
-  padding: 2rem 1.75rem;
+  padding: 3rem 2.5rem;
   transition: var(--transition);
   position: relative;
 }
@@ -596,21 +596,21 @@ h2 {
 
 .product__card-icon {
   color: var(--color-teal);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .product__card h3 {
   font-family: var(--font-body);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.85rem;
   color: var(--color-navy);
 }
 
 .product__card p {
-  font-size: 0.92rem;
+  font-size: 1rem;
   color: var(--color-slate);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* ---- FAQ ---- */
@@ -805,10 +805,6 @@ h2 {
   .about__inner {
     grid-template-columns: 1fr;
     gap: 2.5rem;
-  }
-
-  .product__grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .hero__visual { display: none; }
