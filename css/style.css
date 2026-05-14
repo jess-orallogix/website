@@ -793,6 +793,31 @@ h2 {
   color: rgba(255,255,255,0.35);
 }
 
+.footer__legal-links {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__legal-links a {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: var(--transition);
+}
+
+.footer__legal-links a:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+.footer__legal-links span {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+}
+
 .footer__disclaimer {
   margin-top: 0.5rem;
   max-width: 640px;
