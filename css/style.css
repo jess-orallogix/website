@@ -837,6 +837,20 @@ h2 {
 }
 
 @media (max-width: 640px) {
+  .top-banner {
+    padding: 0.4rem 0.75rem;
+  }
+  .top-banner p {
+    font-size: 0.72rem;
+    line-height: 1.3;
+  }
+  .nav {
+    top: 1.75rem;
+  }
+  .nav--scrolled {
+    top: 1.75rem;
+  }
+
   .team-card {
     flex-direction: column;
     align-items: center;
